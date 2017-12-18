@@ -18,7 +18,7 @@ namespace example
     private async Task Execute()
     {
       var imdb = new Imdb("API_KEY");
-      var movie = await imdb.GetMovie("MOVIE_TITLE");
+      var movie = await imdb.GetMovieAsync("MOVIE_TITLE");
 
       // Log title unless there is an error
       var title = movie.Error ?? movie.Title;

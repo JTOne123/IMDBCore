@@ -21,110 +21,110 @@ namespace IMDBCore
         
         public enum ImdbType { Error, Movie, Series, Episode};
 
-        public async Task<ImdbMovie> GetMovie(string title)
+        public async Task<ImdbMovie> GetMovieAsync(string title)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, int year)
+        public async Task<ImdbMovie> GetMovieAsync(string title, int year)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "y=" + year }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "y=" + year }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, ImdbType type)
+        public async Task<ImdbMovie> GetMovieAsync(string title, ImdbType type)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "type=" + type }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "type=" + type }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieAsync(string title, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, int year, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieAsync(string title, int year, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "y=" + year, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "y=" + year, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, ImdbType type, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieAsync(string title, ImdbType type, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "type=" + type, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "type=" + type, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, bool fullPlot, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieAsync(string title, bool fullPlot, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "plot=" + fullPlot, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "plot=" + fullPlot, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovie(string title, bool fullPlot, ImdbType type, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieAsync(string title, bool fullPlot, ImdbType type, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + title, "plot=" + fullPlot, "type=" + type, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + title, "plot=" + fullPlot, "type=" + type, "tomatoes=" + tomatoes }));
             return movie;
         }
 
-        public async Task<ImdbMovie> GetMovieFromId(string id)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + id }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, int year)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, int year)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "i=" + id, "y=" + year }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "y=" + year }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + id, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, ImdbType type)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, ImdbType type)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + id, "type=" + type }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "type=" + type }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, int year, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, int year, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "i=" + id, "y=" + year, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "y=" + year, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, ImdbType type, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, ImdbType type, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "t=" + id, "type=" + type, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "type=" + type, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, bool fullPlot, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, bool fullPlot, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "i=" + id, "plot=" + fullPlot, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "plot=" + fullPlot, "tomatoes=" + tomatoes }));
             return movie;
         }
         
-        public async Task<ImdbMovie> GetMovieFromId(string id, bool fullPlot, ImdbType type, bool tomatoes)
+        public async Task<ImdbMovie> GetMovieFromIdAsync(string id, bool fullPlot, ImdbType type, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdb(new[] { "i=" + id, "plot=" + fullPlot, "type=" + type, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "plot=" + fullPlot, "type=" + type, "tomatoes=" + tomatoes }));
             return movie;
         }
 
-        public async Task<ImdbMovieSearchResult> SearchMovie(string title)
+        public async Task<ImdbMovieSearchResult> SearchMovieAsync(string title)
         {
-            var movie = DeserializeImdbMovieSearchResult(await GetDataFromOmdb(new[] { "s=" + title }));
+            var movie = DeserializeImdbMovieSearchResult(await GetDataFromOmdbAsync(new[] { "s=" + title }));
             return movie;
         }
-        public async Task<ImdbMovieSearchResult> SearchMovie(string title, int page)
+        public async Task<ImdbMovieSearchResult> SearchMovieAsync(string title, int page)
         {
-            var movie = DeserializeImdbMovieSearchResult(await GetDataFromOmdb(new[] { "s=" + title, "page=" + page }));
+            var movie = DeserializeImdbMovieSearchResult(await GetDataFromOmdbAsync(new[] { "s=" + title, "page=" + page }));
             return movie;
         }
 
@@ -140,7 +140,7 @@ namespace IMDBCore
             return deserializedProduct;
         }
 
-        private async Task<string> GetDataFromOmdb(IEnumerable<string> args)
+        private async Task<string> GetDataFromOmdbAsync(IEnumerable<string> args)
         {
             var input = args.Aggregate("", (current, t) => current + ("&" + t));
 
