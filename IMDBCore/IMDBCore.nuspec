@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>IMDBCore</id>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <title>IMDBCore</title>
     <authors>Kurozero</authors>
     <owners>Kurozero</owners>
     <projectUrl>https://github.com/KurozeroPB/IMDBCore</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Wrapper for omdbapi in C# .NETCore</description>
-    <releaseNotes>Rewrite all functions, everything is now async</releaseNotes>
+    <releaseNotes>Return error when an error happens unless an empty string</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>C# csharp OpenIMDB imdb omdb dotnet dotnetcore</tags>
     <dependencies>

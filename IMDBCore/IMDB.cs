@@ -149,10 +149,8 @@ namespace IMDBCore
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var response = await client.GetAsync($"http://www.omdbapi.com/?{input}&apikey={_apiKey}");
-            if (!response.IsSuccessStatusCode) return "";
-            var json = await response.Content.ReadAsStringAsync();
-            return json;
+            var response = await client.GetStringAsync($"http://www.omdbapi.com/?{input}&apikey={_apiKey}");
+            return response;
         }
     }
 }

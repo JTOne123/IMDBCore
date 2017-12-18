@@ -20,11 +20,10 @@ namespace example
       var imdb = new Imdb("API_KEY");
       var movie = await imdb.GetMovie("MOVIE_TITLE");
 
-      Console.WriteLine(movie.Plot);
+      // Log title unless there is an error
+      var title = movie.Error ?? movie.Title;
+      System.Console.WriteLine(title);
     }
   }
 }
 ```
-
-### TODO
-- Make errors return properly instead of an empty string which makes it crash
