@@ -22,7 +22,7 @@ namespace example
 
       // Log title unless there is an error
       var title = movie.Error ?? movie.Title;
-      System.Console.WriteLine(title);
+      Console.WriteLine(title);
     }
   }
 }
