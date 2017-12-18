@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>IMDBCore</id>
+    <version>0.1.0</version>
+    <title>IMDBCore</title>
+    <authors>Kurozero</authors>
+    <owners>Kurozero</owners>
+    <projectUrl>https://github.com/KurozeroPB/IMDBCore</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wrapper for omdbapi in C# .NETCore</description>
+    <releaseNotes>Rewrite all functions, everything is now async</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>C# csharp OpenIMDB imdb omdb dotnet dotnetcore</tags>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="Microsoft.NETCore.App" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/media/kurozero/Data/RiderProjects/IMDBCore/IMDBCore/bin/Debug/netcoreapp2.0/IMDBCore.runtimeconfig.json" target="lib/netcoreapp2.0/IMDBCore.runtimeconfig.json" />
+    <file src="/media/kurozero/Data/RiderProjects/IMDBCore/IMDBCore/bin/Debug/netcoreapp2.0/IMDBCore.dll" target="lib/netcoreapp2.0/IMDBCore.dll" />
+  </files>
+</package>
