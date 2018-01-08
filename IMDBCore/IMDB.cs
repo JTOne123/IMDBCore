@@ -11,8 +11,6 @@ namespace IMDBCore
 {
     public class Imdb
     {
-        private static void Main() {}
-        
         private readonly string _apiKey;
         public Imdb(string apiKey)
         {
