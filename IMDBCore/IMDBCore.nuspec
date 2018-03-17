@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>IMDBCore</id>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <title>IMDBCore</title>
         <authors>Kurozero</authors>
         <owners>Kurozero</owners>
         <projectUrl>https://github.com/KurozeroPB/IMDBCore</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Wrapper for omdbapi in C# .NETCore</description>
-        <releaseNotes>1.0.1 update</releaseNotes>
+        <releaseNotes>Fix some api parameters for GetMovieFromIdAsync()</releaseNotes>
         <copyright>Copyright 2017</copyright>
         <tags>C# csharp OpenIMDB imdb omdb dotnet dotnetcore</tags>
         <dependencies>

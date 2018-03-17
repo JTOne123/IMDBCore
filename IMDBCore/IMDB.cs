@@ -17,6 +17,8 @@ namespace IMDBCore
             _apiKey = apiKey;
         }
         
+        public static readonly string Version = "1.0.2";
+        
         public enum ImdbType { Error, Movie, Series, Episode};
 
         public async Task<ImdbMovie> GetMovieAsync(string title)
@@ -69,7 +71,7 @@ namespace IMDBCore
 
         public async Task<ImdbMovie> GetMovieFromIdAsync(string id)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id }));
             return movie;
         }
         
@@ -81,13 +83,13 @@ namespace IMDBCore
         
         public async Task<ImdbMovie> GetMovieFromIdAsync(string id, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "tomatoes=" + tomatoes }));
             return movie;
         }
         
         public async Task<ImdbMovie> GetMovieFromIdAsync(string id, ImdbType type)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "type=" + type }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "type=" + type }));
             return movie;
         }
         
@@ -99,7 +101,7 @@ namespace IMDBCore
         
         public async Task<ImdbMovie> GetMovieFromIdAsync(string id, ImdbType type, bool tomatoes)
         {
-            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "t=" + id, "type=" + type, "tomatoes=" + tomatoes }));
+            var movie = DeserializeImdbMovie(await GetDataFromOmdbAsync(new[] { "i=" + id, "type=" + type, "tomatoes=" + tomatoes }));
             return movie;
         }
         
